@@ -1,0 +1,59 @@
+section---DESCRIPTION:
+    ============================================================
+Title:
+    Improper Fractions
+Version:
+    2022.8-29
+Author:
+    D. Michael Parrish [aut]
+Date:
+    2022-08-29
+License:
+    AGPL-3
+Type:
+    Package
+Package:
+    o0124042401214167516743034366206773443251107
+Description:
+    Compute representations of improper fractions.
+Maintainer:
+    Neat O <neatoverse@yahoo.com>
+section---INSTALL:
+    ============================================================
+    To install this non-standard package, copy the files,
+    including the containing subdirectory, to a known directory.
+    The subdirectoy should be named
+    o0124042401214167516743034366206773443251107
+    to be consistent with the package design.
+section---HELP:
+    ============================================================
+help---Usage:
+    improper.R <- paste0 (
+        # insert path to directory
+        "/o0124042401214167516743034366206773443251107",
+        "/improper.R")
+    improper <- source(improper.R, local = baseenv())[[1]]
+    improper(x)
+help---Arguments:
+    x:  a `double` vector.
+help---Value:
+    a two-column `matrix`.
+        For each finite argument-element, the matrix will have a
+    rounded value---either `floor` or `ceiling`---in the first
+    column and a fractional value in the second column. The sign
+    of the rounded value will be equal to the sign of the
+    corresponding element of the argument. The sum of the
+    rounded value and fractional value will be equal to the
+    corresponding elment of input.
+        For each non-finite argument elements `NA_real_`, `NaN`,
+    `Inf`, and `Inf`, the corresponding rows of the return will
+    contain (`NA_real_`, `NA_real_`), (`NaN`, `NaN`), (`Inf`, 0),
+    and (`-Inf`, 0), respectively.
+help---Examples:
+    improper.R <- paste0 (
+        # insert path to directory
+        "/o0124042401214167516743034366206773443251107",
+        "/improper.R")
+    improper <- source(improper.R, local = baseenv())[[1]]
+    improper(c(NA_real_, NaN, Inf, -Inf, -1.7, -1.5, -1.2, -1,
+        -.7, -.2, 0, .2, .7, 1, 1.2, 1.5, 1.7))
