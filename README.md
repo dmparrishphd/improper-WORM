@@ -1,2 +1,1 @@
-# improper-WORM
-Compute representations of improper fractions. 
+[README](https://github.com/dmparrishphd/improper-CORW).
